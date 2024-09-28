@@ -21,7 +21,17 @@ const captions = [
   'CyberSavvy: CyberSecurity Teaching to Kids',
   'Anti Dowry Awareness Event',
 ];
-
+const data = [
+  { src: DJSNSSLogo, alt: 'NSS DJSCE Logo', link: '/' },
+  { src: DJSLogo, alt: 'DJS Logo', link: 'https://djsce.ac.in/' },
+  { src: NSSLogo, alt: 'NSS Logo', link: 'https://nss.gov.in/' },
+];
+const funcs = [
+  { name: 'SneakPeek', component: <SneakPeek /> },
+  { name: 'VolunteerHomePage', component: <VolunteerHomePage /> },
+  { name: 'Team', component: <Team /> },
+  { name: 'ImageCarousel', component: <ImageCarousel images={images} captions={captions} /> },
+];
 const Home = () => {
   return (
     <div className="flex flex-col">
@@ -35,6 +45,23 @@ const Home = () => {
       >
         <div className="w-full h-full bg-black bg-opacity-30 flex flex-col items-center justify-center">
           <div className='flex flex-row justify-evenly items-center'>
+            {
+              data.map((d, idx) => (
+                <a href={d.link} target='_blank' rel='noreferrer' key={idx}>
+                  <motion.a
+                    key={idx}
+                    href={d.link}
+                    target='_blank'
+                    rel='noreferrer'
+                    initial={{ scale: 0.8, opacity: 0 }}
+                    animate={{ scale: 1, opacity: 1 }}
+                    transition={{ duration: 1.2 }}
+                  >
+                    <img src={d.src} alt={d.alt} className="h-20 mb-10" />
+                  </motion.a>
+                </a>
+              ))
+            }
             <motion.img
               src={DJSNSSLogo}
               alt="NSS DJSCE Logo"
@@ -79,46 +106,19 @@ const Home = () => {
           </motion.p>
         </div>
       </motion.div>
-
-      {/* Sneak Peek Section */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <SneakPeek />
-      </motion.div>
-
-      {/* Volunteer Section */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <VolunteerHomePage />
-      </motion.div>
-
-      {/* Faculty Team Section */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <Team />
-      </motion.div>
-
-      {/* Image Carousel */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true }}
-      >
-        <ImageCarousel images={images} captions={captions} />
-      </motion.div>
+      {
+        funcs.map((func, idx) => (
+          <motion.div
+            key={idx}
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true }}
+          >
+            {func.component}
+          </motion.div>
+        ))
+      }
     </div>
   );
 };

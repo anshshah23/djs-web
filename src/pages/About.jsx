@@ -73,32 +73,6 @@ const About = () => {
 
         <Faculty />
 
-        {/* Core Team Section */}
-        {/* <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="bg-white p-4 sm:p-6 md:p-8 lg:p-12 rounded-lg shadow-lg mb-10"
-        >
-          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold text-center mb-6">
-            Core Team
-          </h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
-            {/* Core Team Members */}
-            {/* {['Core Team Member 1', 'Core Team Member 2', 'Core Team Member 3'].map((member, idx) => (
-              <div key={idx} className="flex flex-col items-center">
-                <div className="w-24 h-24 md:w-32 md:h-32 lg:w-40 lg:h-40 bg-gray-200 rounded-full mb-4">
-                  <img src="https://via.placeholder.com/150" alt={member} className="w-full h-full object-cover rounded-full" />
-                </div>
-                <h3 className="text-lg sm:text-xl md:text-2xl font-semibold mb-2">{member}</h3>
-                <p className="text-base text-center">
-                  {member}&apos;s Role
-                </p>
-              </div>
-            ))}
-          </div>
-        </motion.div> */}
-
         {/* Faculty Team Section */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
