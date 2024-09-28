@@ -24,7 +24,7 @@ const About = () => {
           initial={{ opacity: 0, y: -50 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
-          className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mb-6"
+          className="text-2xl sm:text-3xl md:text-4xl font-semibold text-center mt-6 md:mt-0 mb-6"
         >
           About Us
         </motion.h1>
@@ -64,7 +64,7 @@ const About = () => {
           {
             coCommRoles.map((role, index) => (
               <div key={index} className='bg-white p-6 rounded-lg shadow-md my-4 lg:w-[48%] mx-auto'>
-                <h3 className='text-lg sm:text-xl lg:text-2xl font-semibold text-black mb-4 font-cursive'>{role.title}</h3>
+                <h3 className='text-lg sm:text-2xl lg:text-3xl font-semibold text-black mb-4 font-cursive'>{role.title}</h3>
                 <p className='text-black text-sm sm:text-base md:text-lg lg:text-xl'>{role.description}</p>
               </div>
             ))
