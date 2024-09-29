@@ -62,30 +62,6 @@ const Home = () => {
                 </a>
               ))
             }
-            <motion.img
-              src={DJSNSSLogo}
-              alt="NSS DJSCE Logo"
-              className="h-20 mb-10"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1.2 }}
-            />
-            <motion.img
-              src={DJSLogo}
-              alt="NSS DJSCE Logo"
-              className="h-20 mb-10"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1.2 }}
-            />
-            <motion.img
-              src={NSSLogo}
-              alt="NSS Logo"
-              className="h-20 mb-10"
-              initial={{ scale: 0.8, opacity: 0 }}
-              animate={{ scale: 1, opacity: 1 }}
-              transition={{ duration: 1.2 }}
-            />
           </div>
           <motion.h1
             className="text-xl md:text-5xl sm:text-3xl font-bold mb-10 mx-2 text-center text-white"
