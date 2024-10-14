@@ -15,7 +15,7 @@ const About = () => {
   ];
 
   return (
-    <div className='flex flex-col bg-gradient-to-r pt-12 from-pink-200 to-blue-300 text-gray-800'>
+    <div className='flex flex-col pt-12 bg-pink-200 text-gray-800'>
       <div className="max-w-7xl mx-auto p-4 sm:p-6 md:p-8 lg:p-12">
         {/* Page Title */}
         <motion.h1

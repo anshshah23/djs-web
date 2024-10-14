@@ -60,7 +60,7 @@ const LoginWork = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-gray-100">
+    <div className="flex justify-center items-center min-h-screen bg-orange-300">
       <div className="w-full max-w-lg bg-white p-8 rounded-lg shadow-md">
         <h1 className="text-2xl font-bold mb-6 text-center">Submit Your Work</h1>
         <form onSubmit={handleSubmit} className="space-y-4">

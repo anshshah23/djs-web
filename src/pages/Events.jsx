@@ -63,7 +63,7 @@ const Events = () => {
   );
 
   return (
-    <div className="bg-blue-200 flex flex-col">
+    <div className="bg-lime-200 flex flex-col">
       {/* Main Events Section */}
       <div className="mx-auto p-6 mt-20">
         <motion.h1

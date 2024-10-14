@@ -1,6 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
-import Navbar from '../components/Navbar';
 import axios from 'axios';
 
 const AdminWorkPage = () => {
@@ -13,7 +11,6 @@ const AdminWorkPage = () => {
   const [editEvent, setEditEvent] = useState(null);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [eventToDelete, setEventToDelete] = useState(null);
-  const navigate = useNavigate();
 
   useEffect(() => {
     axios.get('http://localhost:5000/api/events')
@@ -65,7 +62,6 @@ const AdminWorkPage = () => {
 
   return (
     <div className='flex flex-col'>
-      <Navbar />
       <div className="container p-auto mt-20 mx-auto p-4">
         <h1 className="text-3xl font-bold text-gray-800 mb-8">Admin Work Page</h1>
         <button
