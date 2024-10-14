@@ -4,7 +4,7 @@ import Image1 from '../../assets/Events/TreePlantation.png';
 
 const Volunteer = () => {
   return (
-    <div className="bg-gradient-to-r w-full from-blue-300 to-gray-300 text-white flex flex-col">
+    <div className="bg-gradient-to-b w-full from-blue-300 to-gray-300 text-white flex flex-col">
       <motion.div
         initial={{ opacity: 0, y: -50 }}
         whileInView={{ opacity: 1, y: 0 }}
