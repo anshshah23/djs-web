@@ -6,7 +6,7 @@ import VolunteerFillerSection from '../components/volunteer/FillerSection';
 
 const Volunteer = () => {
   return (
-    <div className='bg-gradient-to-b  from-blue-300 to-white'>
+    <div className='bg-gradient-to-bl  from-blue-300 to-gray-300'>
           <div className="mt-10 p-6 mx-auto max-w-7xl text-white flex flex-col justify-center">
       <div className="mt-10 "
       >

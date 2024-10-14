@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 
 const VolunteerPolicy = () => {
   return (
-    <div className=' bg-gradient-to-b from-blue-300 to-white flex justify-center items-center'>
+    <div className=' bg-gradient-to-bl from-blue-300 to-slate-300 flex justify-center items-center'>
       <motion.div
         initial={{ opacity: 0, x: -100 }}
         animate={{ opacity: 1, x: 0 }}
