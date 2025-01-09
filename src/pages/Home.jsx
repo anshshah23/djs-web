@@ -3,34 +3,11 @@ import DJSLogo from '../assets/DJSLogo.png';
 import DJSNSSLogo from '../assets/DJSNSSLogo.png';
 import NSSLogo from '../assets/NSSLogo.png';
 import CorePic from '../assets/Core.jpg';
-import ImageCarousel from '../components/ImageCarousel';
-import SneakPeek from '../components/SneakPeek';
-import Team from '../components/Team';
 
-import BandraBC from '../assets/Events/BandraBC.png';
-import CyberSavvy from '../assets/Events/CyberSavvy.png';
-import AntiDowry from '../assets/Events/AntiDowry.png';
-import yarana1 from '../assets/Events/Yaarana/yarana1.jpg';
-
-import VolunteerHomePage from '../components/volunteer/VolunteerHomePage';
-
-const images = [BandraBC, yarana1, CyberSavvy, AntiDowry];
-const captions = [
-  'Bandra Beach Cleanup',
-  'Friendship Day with Kids',
-  'CyberSavvy: CyberSecurity Teaching to Kids',
-  'Anti Dowry Awareness Event',
-];
 const data = [
   { src: DJSNSSLogo, alt: 'NSS DJSCE Logo', link: '/' },
   { src: DJSLogo, alt: 'DJS Logo', link: 'https://djsce.ac.in/' },
   { src: NSSLogo, alt: 'NSS Logo', link: 'https://nss.gov.in/' },
-];
-const funcs = [
-  { name: 'SneakPeek', component: <SneakPeek /> },
-  { name: 'VolunteerHomePage', component: <VolunteerHomePage /> },
-  { name: 'Team', component: <Team /> },
-  { name: 'ImageCarousel', component: <ImageCarousel images={images} captions={captions} /> },
 ];
 const Home = () => {
   return (
@@ -82,19 +59,6 @@ const Home = () => {
           </motion.p>
         </div>
       </motion.div>
-      {
-        funcs.map((func, idx) => (
-          <motion.div
-            key={idx}
-            initial={{ opacity: 0 }}
-            whileInView={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-            viewport={{ once: true }}
-          >
-            {func.component}
-          </motion.div>
-        ))
-      }
     </div>
   );
 };
